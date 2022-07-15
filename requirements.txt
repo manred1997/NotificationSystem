@@ -1,0 +1,10 @@
+seqeval==0.0.12
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.12.2
+sanic==21.9.3
+Sanic-Cors==1.0.1
+sanic-jwt==1.7.0
+tqdm==4.63.1
+numpy==1.22.3
+pandas==1.4.2
+pytrends==1.1.2
