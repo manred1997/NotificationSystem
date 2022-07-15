@@ -37,3 +37,28 @@ results = requests.get(url)
 print(results)
 print(results.json())
 ```
+
+Output:
+```json
+[
+    {
+        "image": {
+            "newsUrl": "",
+            "source": "",
+            "imgUrl": "",
+            "shareUrl": "",
+            "articles": [
+                {
+                    "articleTitle": "",
+                    "url": "",
+                    "source": "",
+                    "time": "",
+                    "snippet": "",
+                },
+                {}
+            ]
+        }
+    },
+    {}
+]
+```
