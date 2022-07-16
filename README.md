@@ -1,6 +1,6 @@
 # Notification System
 The system would be as following
-![image](asset/system.png)
+![image](asset/NotificationSystem.png)
 
 
 
