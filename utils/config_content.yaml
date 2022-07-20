@@ -1,0 +1,51 @@
+
+Author: Vu Hoang
+Up-to-Date: 7-19-2022
+Phone: 0964819653
+
+Articles:
+  - www.vinmec.com:
+    - urls: https://www.vinmec.com/
+    - content_tag: div
+    - content_class: content
+    - content_id:
+    - content_text_tag: p
+    - content_summary_tag:
+    - content_summary_class:
+    - content_summary_id:
+    - ranking_score: 5
+
+  - vnexpress.net:
+    - urls: https://vnexpress.net/
+    - content_tag: article
+    - content_class: fck_detail
+    - content_id:
+    - content_text_tag: p
+    - content_summary_tag:
+    - content_summary_class:
+    - content_summary_id:
+    - ranking_score: 5
+
+  - zingnews.vn:
+    - urls: https://zingnews.vn/
+    - content_tag: div
+    - content_class: the-article-body
+    - content_id:
+    - content_text_tag: p
+    - content_summary_tag: p
+    - content_summary_class: the-article-summary
+    - content_summary_id:
+    - ranking_score: 5
+
+  - suckhoedoisong.vn:
+    - urls: https://suckhoedoisong.vn/
+    - content_tag: div
+    - content_class: detail-content afcbc-body
+    - content_id:
+    - content_text_tag: p
+    - content_summary_tag:
+    - content_summary_class:
+    - content_summary_id:
+    - ranking_score: 5
+  
+

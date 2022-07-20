@@ -4,6 +4,10 @@ import logging
 import warnings
 from typing import Optional, Text, Dict
 
+
+import yaml
+from yaml.loader import SafeLoader
+
 from utils.constants import (
     DEFAULT_ENCODING,
     DEFAULT_SANIC_WORKERS,
@@ -191,3 +195,8 @@ def update_sanic_log_level(
         logger.addHandler(syslog_handler)
         error_logger.addHandler(syslog_handler)
         access_logger.addHandler(syslog_handler)
+
+def read_file_yaml(filename):
+    with open(filename) as f:
+        data = yaml.load(f, Loader=SafeLoader)
+    return data
