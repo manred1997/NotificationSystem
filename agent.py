@@ -1,6 +1,8 @@
 import functools
 from typing import Callable, Any, Text, Tuple
 
+import pandas as pd
+
 from utils.constants import (
     HOST_LOCATE,
     TIME_ZONE,
@@ -11,7 +13,7 @@ from utils.constants import (
     BACKOFF_FACTOR,
     REQUEST_ARGS
 )
-from service import TrendReq
+from service.trending import TrendReq
 
 
 
@@ -52,6 +54,8 @@ class Agent(object):
             backoff_factor=backoff_factor,
             requests_args=requests_args
         )
+
+        self.df_interet_over_time = None
     @classmethod
     def load_agent(cls,
                     hl: Text,
@@ -83,3 +87,33 @@ class Agent(object):
     async def realtime_trending_searches(self):
         retrieval_result = self.pytrend.realtime_trending_searches()
         return retrieval_result
+    
+    @agent_must_be_ready
+    async def interest_over_time(self):
+        intersect_over_time_data = self.pytrend.interest_over_time()
+        intersect_over_time_data = intersect_over_time_data.reset_index()
+        return intersect_over_time_data
+    
+    def find_trend_base_interes_over_time(
+        self, keywords, cat=0, timeframe='today 1-m', geo='VN'
+        ):
+
+        # check col have nan value in df
+        
+
+        def compare_interest_over_time(keywords, compare_kw, cat=0, timeframe='today 1-m', geo='VN'):
+            
+            self.pytrend.build_payload(keywords.append(compare_kw),
+                                cat=cat,
+                                timeframe=timeframe,
+                                geo=geo)
+            data = self.pytrend.interest_over_time().reset_index()
+            if data.columns[data.isin([100]).any()] == compare_kw:
+                pass #update df
+            else:
+                pass # select comlum that have highest value and store it
+                # delete df
+                # update df
+            return data
+
+        
